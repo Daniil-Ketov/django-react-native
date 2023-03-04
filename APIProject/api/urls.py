@@ -6,5 +6,5 @@ router = DefaultRouter()
 router.register('articles', ArticleViewSet, basename='articles')
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
 ]
