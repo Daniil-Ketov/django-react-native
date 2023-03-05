@@ -1,14 +1,16 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native';
 import { Card } from 'react-native-paper';
 
-function Home() {
-  return (
-    <Card style={styles.cardStyle}>
-        <Text>
-        Hello From Home
+function Home(props) {
+    const [name, setName] = useState("DefaultName")
+    return (
+        <Card style={styles.cardStyle}>
+        <Text style={{fontSize:25}}>
+            {name}
         </Text>
-    </Card>
+        <Button title="Change text" onPress={()=>setName("Changed name")}/>
+        </Card>
   )
 }
 
